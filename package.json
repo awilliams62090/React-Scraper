@@ -25,8 +25,10 @@
   },
   "homepage": "https://github.com/awilliams62090/React-Scraper#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
     "morgan": "^1.9.1"
   },
