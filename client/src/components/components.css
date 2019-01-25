@@ -1,0 +1,9 @@
+.card{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.bookImg{
+    max-height: 300px;
+    max-width: 150px;
+}

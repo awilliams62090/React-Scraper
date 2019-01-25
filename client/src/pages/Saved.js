@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Jumbotron, Card } from "reactstrap";
 import BookCard from "../components/BookCard";
-import {List} from "../components/List"
 import BookApi from "../utils/BookApi";
 
 class Saved extends Component {
@@ -34,17 +33,17 @@ class Saved extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
-                <strong>(React) Google Books Search</strong>
+                <strong>Google Books Search</strong>
               </h1>
-              <h2 className="text-center">Search for your favorite books and save them for later!</h2>
+              <h2 className="text-center">Got to the search page to get reading!!</h2>
             </Jumbotron>
           </Col>
         </Row>
         <Row>
           <Col size="md-12">
-            <Card title="Saved Books" icon="download">
+            
               {this.state.books.length ? (
-                <List>
+              <Card title="Saved Books" >
                   {this.state.books.map(book => (
                     <BookCard
                       key={book._id}
@@ -64,11 +63,10 @@ class Saved extends Component {
                       )}
                     />
                   ))}
-                </List>
+                </Card>
               ) : (
-                <h2 className="text-center">No Saved Books</h2>
+                <h2 className="text-center">No Saved Books Yet :(</h2>
               )}
-            </Card>
           </Col>
         </Row>
       </Container>

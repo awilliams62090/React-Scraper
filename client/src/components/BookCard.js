@@ -1,12 +1,13 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
+import "./components.css"
 
 const BookCard = ({title, author, link, description, image }) => {
   return (
     <div>
       <Card>
-        <CardImg top width="100%" src={image} alt={title} />
+        <CardImg className="bookImg" top width="100%" src={image} alt={title} />
         <CardBody>
           <CardTitle><h3>{title}</h3></CardTitle>
           <CardSubtitle><h5>Written By {author}</h5></CardSubtitle>
