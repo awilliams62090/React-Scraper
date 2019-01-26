@@ -1,20 +1,13 @@
 import React, {Component} from "react";
-import {
-    Jumbotron,
-    Container,
-    Row,
-    Col,
-    Card
-} from "reactstrap";
+import {Jumbotron, Container, Row, Col, Card} from "reactstrap";
 import BookApi from "../utils/BookApi";
 import BookCard from "../components/BookCard";
 import SearchForm from "../components/SearchForm";
 
-
 class Home extends Component {
     state = {
         books: [],
-        q: "",
+        q: ""
     };
 
     handleInputChange = event => {
@@ -91,13 +84,7 @@ class Home extends Component {
                                         .join(", ")}
                                         description={book.volumeInfo.description}
                                         image={book.volumeInfo.imageLinks.thumbnail}
-                                        Button={() => (
-                                        <button
-                                            onClick={() => this.handleBookSave(book.id)}
-                                            className="btn btn-primary ml-2">
-                                            Save
-                                        </button>
-                                    )}/>))}
+                                        handleBookSave={this.handleBookSave}/>))}
                             </Col>
                         )
                         : (

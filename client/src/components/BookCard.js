@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+  CardTitle, CardSubtitle, Button, Row, Col } from 'reactstrap';
 import "./components.css"
 
-const BookCard = ({title, author, link, description, image }) => {
+const BookCard = ({title, author, link, description, image, handleBookSave }) => {
   return (
     <div>
       <Card>
@@ -12,10 +12,18 @@ const BookCard = ({title, author, link, description, image }) => {
           <CardTitle><h3>{title}</h3></CardTitle>
           <CardSubtitle><h5>Written By {author}</h5></CardSubtitle>
           <CardText><p>{description}</p></CardText>
+          <Row>
+          <Col>
           <Button color="secondary"><a target="_blank" rel="noopener noreferrer" href={link}>
               View Online
             </a>
           </Button>
+          </Col>
+          <Col>
+          <Button color="success" onClick={handleBookSave}
+          type="submit"> Save Book!</Button>
+          </Col>
+          </Row>
         </CardBody>
       </Card>
     </div>

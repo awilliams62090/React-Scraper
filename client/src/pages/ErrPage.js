@@ -10,8 +10,8 @@ function ErrPage() {
           <Jumbotron>
             <h1 className="text-center">404 Page Not Found</h1>
             <h1 className="text-center">
-              <span role="img" aria-label="Face With Rolling Eyes Emoji">
-                🙄
+              <span role="img" aria-label="no-books-here">
+                <img src="./no-books.png" alt="no-books-here"/>
               </span>
             </h1>
           </Jumbotron>
